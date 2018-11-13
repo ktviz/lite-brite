@@ -1,0 +1,23 @@
+* { padding: 0; margin: 0; box-sizing: border-box; }
+#container {
+  background-color: #ccc;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.cell {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #aaa;
+}
+
+[data-color="1"] { background-color: #f00; }
+[data-color="2"] { background-color: #0f0; }
+[data-color="3"] { background-color: #00f; }
+[data-color="4"] { background-color: #a39; }
+[data-color="5"] { background-color: #9a3; }
+[data-color="6"] { background-color: #39a; }
+
+tr {
+  height: 10px;
+}
