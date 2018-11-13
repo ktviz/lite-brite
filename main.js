@@ -1,5 +1,5 @@
-const cellWidth = 10
-const cellHeight = 10
+const cellWidth = 40
+const cellHeight = 40
 
 const getClientHeight = () => { return window.innerHeight }
 const getClientWidth = () => { return window.innerWidth }
@@ -16,12 +16,10 @@ const getCellRows = () => {
 
 const toggleColor = (event) => {
     const element = event.target
-    const currentColor = element.getAttribute('data-color')
-    element.setAttribute('data-color', (currentColor + 1) % 6)
+    let currentColor = element.getAttribute('data-color')
+    currentColor++
+    element.setAttribute('data-color', (currentColor % 7))
 }
-
-console.log('Column count: ', getCellCols())
-console.log('Row count: ', getCellRows())
 
 for (let row = 1; row <= getCellRows(); row++) {
 	const rowContainer = document.createElement('tr')
@@ -29,6 +27,7 @@ for (let row = 1; row <= getCellRows(); row++) {
 		const cell = document.createElement('td')
         cell.setAttribute('data-row-index', row)
         cell.setAttribute('data-col-index', col)
+        cell.setAttribute('data-color', 0)
         cell.classList.add('cell')
         cell.onclick = toggleColor
         rowContainer.appendChild(cell)
