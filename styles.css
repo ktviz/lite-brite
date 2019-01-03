@@ -10,7 +10,7 @@
   height: 40px;
   border: 1px solid #aaa;
 }
-[data-color="0"] { background-color: #ccc; }
+[data-color="0"] { background-color: #000; }
 [data-color="1"] { background-color: #f00; }
 [data-color="2"] { background-color: #0f0; }
 [data-color="3"] { background-color: #00f; }
